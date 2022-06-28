@@ -18,6 +18,17 @@
                 header("location:login.php");
                 echo"success";
             }
+            // if(is_dir("users/$email")){
+            //     $errMsg="Email already registerd";
+            // }
+            // else {
+            //     if(mysqli_query($connection, "insert into userdetails(email, password, name, age, city, gender, image) values('$email', '$pass', '$name', $age, '$city', '$gender', '$email.jpg')")){
+            //         if(move_uploaded_file($tmp,"users/$email.jpg")){
+            //             header("location:login.php");
+            //             echo"success";
+            //         }
+            //     }
+            // }
         }
     }
 ?>
@@ -29,6 +40,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
         <title>Login Page</title>
+        <style>
+            .error{
+                color: red;
+            }
+        </style>
     </head>
     <body>
         <section class="container my-5">
@@ -86,5 +102,6 @@
             </form>
         </section>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="validate.js"></script>
     </body>
 </html>
